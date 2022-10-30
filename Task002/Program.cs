@@ -5,10 +5,14 @@ Console.Clear();
 
 int SecondDigit(int x)
 {
-    int secondDigit = default;
-    while (x >= 1000) x = x / 10;
-    secondDigit = x % 10;
-    return secondDigit;
+    int secondDigit = ((x%100)%10);
+    if (x >= 1000 || x<=-1000)
+    {
+        x = x / 10;
+        secondDigit = x % 10;
+    }
+    else if (x > -99 && x < 100) Console.WriteLine("Третьей цифры нет");
+        return secondDigit;
 }
 
 
